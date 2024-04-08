@@ -1,0 +1,411 @@
+:root {
+  --text-color-blue: #3bbae8;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; /* stack everything */
+}
+
+.title > h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.title {
+  font-family: Arial, sans-serif;
+  background-image: url(./page/overview/assets/ripples-snip.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  margin-block-end: 0;
+}
+
+p {
+  font-size: 92%;
+  margin-block-start: 0;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.App-header {
+  font-size: 4vmin;
+  color: #000000;
+}
+
+.surfspots {
+  column-gap: 40px;
+  margin: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  color: #1c9bc9;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.riversurf {
+  flex: 1;
+}
+
+.tableHeaderContainer {
+  padding: 0 10px;
+  margin: 0 10px;
+  display: flex;
+}
+
+.tableHeader {
+  flex: 1;
+  display: flex;
+}
+
+.tableHeaderCol{
+  flex: 1;
+}
+
+.bungeesurf {
+  flex: 1;
+}
+
+.spotsContainer {
+  width: 700px;
+  margin: auto;
+}
+
+.spotsContainer > h2 {
+  text-decoration: underline;
+}
+
+.spot {
+  display: flex;
+  padding: 20px 10px;
+  margin: 20px 10px;
+  color: #000000;
+  background-color: #ececec;
+  border-radius: 20px;
+}
+
+.miniGraph {
+  flex: 1;
+  width: 100%;
+}
+
+details>summary span.collapsibleIcon {
+  transition: all 1s;
+  align-self: center;
+}
+
+details[open] summary span.collapsibleIcon {
+  transform: rotate(180deg);
+}
+
+.collapsibleIcon {
+  margin: 0 10px;
+  flex: 0.03;
+}
+
+.collapsibleIcon>img {
+  width: 100%;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsibleContent {
+  margin-top: 20px;
+  margin-left: -30px;
+}
+
+.spotname {
+  display: flex;
+  height: 130px;
+}
+
+.spotContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 130%;
+  font-weight: bold;
+  /* background-color: blueviolet; */
+}
+
+.spotname a {
+  flex: 1;
+  text-decoration: none;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meas {
+  padding: 0 20px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-content: center;
+  font-size: 120%;
+  align-items: center;
+  column-gap: 2px;
+}
+
+.timestamp {
+  /*font-weight: normal;*/
+  color: gray;
+}
+
+.unit {
+  font-size: 70%;
+  display: inline;
+}
+
+.flow {
+  flex: 1;
+}
+
+.measurements {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  row-gap: 7px;
+}
+
+.loader{
+  align-self: center;
+  width: 70px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.wave{
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #2C74B3;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px 0 rgba(0, 0, 0, 0.5);
+}
+
+.wave:before, .wave:after{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: black;
+  transform: translate(-50%, -75%);
+}
+
+.wave:before{
+  border-radius: 45%;
+  background: rgba(255, 255, 255, 1);
+  animation: animate 5s linear infinite;
+}
+
+.wave:after{
+  border-radius: 40%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+.doubleCol {
+  flex: 2;
+}
+
+.forecastContainer {
+  font-size: 20px;
+  flex: 2;
+  align-items: center;
+  display: flex;
+  column-gap: 5px;
+  width: 100%;
+}
+
+.forecastGraph {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.hiddenOnMiniGraph {
+  display: none;
+}
+
+.hiddenOnDesktop {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.temp {
+  flex: 1;
+}
+
+/* colors for flow */
+.flow_bad {
+  color: #e2576f;
+}
+.flow_ok {
+  color: #f8cd4c;
+}
+.flow_good {
+  color: #409073;
+}
+.flow_danger {
+  color: #e2576f;
+}
+
+/* colors for temperature */
+.temp_0 {
+  color: #5944fa;
+}
+.temp_1 {
+  color: #3b91f4;
+}
+.temp_2 {
+  color: #7cece5;
+}
+.temp_3 {
+  color: #f6db2a;
+}
+.temp_4 {
+  color: #ec5529;
+}
+
+/* .riversurf {
+  background-color: aquamarine;
+} */
+
+/* .Link {
+  color: rgb(0, 184, 230);
+} */
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.Footer {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  background-color: var(--text-color-blue);
+}
+
+/* stack footer items vertically on small touch screens */
+@media only screen and (max-width: 1000px) {
+  .surfspots {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Footer {
+    flex-direction: column;
+  }
+
+  .collapsibleIcon {
+    width: 15px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .hiddenOnMobile {
+    display: none;
+  }
+
+  .hiddenOnDesktop {
+    display: block;
+  }
+
+  .spotsContainer {
+    width: auto;
+  }
+
+  .spotname {
+    height: 100%;
+  }
+
+  .spotname, .spotContainer {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .forecastContainer {
+    flex-direction: column;
+  }
+}
+
+.Footer a {
+  color: white;
+}
+
+.Footer_item {
+  margin: auto;
+  padding: 1rem;
+  min-width: 12.5rem /*200px*/;
+}
+
+/* for future use */
+/* .temperature_bar {
+  background: rgb(0, 18, 159);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 18, 159, 1) 0%,
+    rgba(48, 230, 235, 1) 30%,
+    rgba(255, 239, 0, 1) 70%,
+    rgba(255, 64, 0, 1) 100%
+  );
+}
+.conditions_bar {
+  background: rgb(250, 49, 49);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 49, 49, 1) 0%,
+    rgba(241, 134, 36, 1) 25%,
+    rgba(232, 212, 24, 1) 50%,
+    rgba(129, 223, 25, 1) 75%,
+    rgba(9, 119, 13, 1) 100%
+  );
+} */
